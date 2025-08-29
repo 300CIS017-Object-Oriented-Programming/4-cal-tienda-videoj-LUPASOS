@@ -1,7 +1,3 @@
-//
-// Created by lupia on 29/08/2025.
-//
-
 #ifndef VIDEOGAMESTORE_H
 #define VIDEOGAMESTORE_H
 
@@ -14,22 +10,28 @@ using std::endl;
 using std::string;
 
 // --- Constantes de productos (ejemplos) ---
-const int JUEGO_DOOM_ETERNAL = 1;
-const int JUEGO_GOD_OF_WAR = 2;
-const int JUEGO_FIFA_24 = 3;
-const int JUEGO_CIVILIZATION_VI = 4;
-const int JUEGO_CYBERPUNK_2077 = 5;
-const int JUEGO_LAST_OF_US = 6;
-const int JUEGO_NBA_2K24 = 7;
-const int JUEGO_STAR_CRAFT_II = 8;
-const int JUEGO_RED_DEAD_REDEMPTION_2 = 9;
-const int JUEGO_UNICHARTED_4 = 10;
-const int JUEGO_FC_24 = 11;
-const int JUEGO_AGE_OF_EMPIRES_IV = 12;
+const int JUEGO_DOOM_ETERNAL = 101;
+const int JUEGO_CYBERPUNK_2077 = 108;
+const int JUEGO_RED_DEAD_REDEMPTION_2 = 119;
+
+
+const int JUEGO_GOD_OF_WAR = 202;
+const int JUEGO_LAST_OF_US = 206;
+const int JUEGO_UNICHARTED_4 = 210;
+
+
+const int JUEGO_NHL_24 = 303;
+const int JUEGO_NBA_2K24 = 307;
+const int JUEGO_FC_24 = 311;
+
+const int JUEGO_CIVILIZATION_VI = 400;
+const int JUEGO_STAR_CRAFT_II = 408;
+const int JUEGO_AGE_OF_EMPIRES_IV = 412;
+
 
 const double PRECIO_DOOM_ETERNAL = 60.00;
 const double PRECIO_GOD_OF_WAR = 50.00;
-const double PRECIO_FIFA_24 = 70.00;
+const double PRECIO_NHL_24 = 70.00;
 const double PRECIO_CIVILIZATION_VI = 30.00;
 const double PRECIO_CYBERPUNK_2077 = 55.00;
 const double PRECIO_LAST_OF_US = 45.00;
@@ -41,20 +43,25 @@ const double PRECIO_FC_24 = 70.00;
 const double PRECIO_AGE_OF_EMPIRES_IV = 40.00;
 
 
-// --- Descuentos (% expresado de 0.0 a 1.0) ---
+// Descuentos (% expresado de 0.0 a 1.0) ---
 const double DESCUENTO_ORO = 0.15;
 const double DESCUENTO_PLATA = 0.08;
 const double DESCUENTO_REGULAR = 0.00;
 
-// --- Descuentos Adicionales ---
+// Descuentos Adicionales ---
 const double DESCUENTO_ADICIONAL_PS5 = 0.05; // 5% de descuento adicional
 const double DESCUENTO_ADICIONAL_ACCION = 0.03; // 3% de descuento adicional
 
-// --- Misceláneos ---
+// Misceláneos ---
 const int MAX_ITEMS_CARRITO = 50;
 
-// --- Declaraciones de funciones ---
 
+
+
+
+
+//este pedacito no lo entendi la verdad
+// Declaraciones de funciones
 /**
  * @brief Muestra el catálogo de juegos disponibles.
  */
@@ -174,15 +181,13 @@ void limpiarCarrito(int& cantidadJuegosRegistrados);
 
 #endif //VIDEOGAMESTORE_H
 //
-// Created by lupia on 29/08/2025.
+// Created by lupassos on 29/08/2025.
 //
 
 #ifndef VIDEOGAMESTORE_VIDEOGAMESTORE_H
 #define VIDEOGAMESTORE_VIDEOGAMESTORE_H
 
-
 class VideogameStore {
 };
-
 
 #endif //VIDEOGAMESTORE_VIDEOGAMESTORE_H

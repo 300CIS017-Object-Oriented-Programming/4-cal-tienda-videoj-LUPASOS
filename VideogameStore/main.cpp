@@ -28,7 +28,7 @@ int leerOpcionMenu()
 {
     int opcion;
     cin >> opcion;
-    while ((opcion < 1 || opcion > 6) && opcion != -1)
+    while ((opcion < 1 || opcion > 6) && opcion != 7)
     {
         cout << "Opcion invalida. Intente de nuevo (1-7 para salir): ";
         cin.clear();

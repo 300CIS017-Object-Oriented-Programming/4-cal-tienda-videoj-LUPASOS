@@ -1,29 +1,24 @@
-//
-// Created by lupia on 29/08/2025.
-//
-
 #include "VideogameStore.h"
-
 
 void mostrarCatalogoJuegos()
 {
-    cout << "\n--- Catalogo de Videojuegos ---\n";
-    cout << "\n--- Categoria: Accion ---\n";
+    cout << "\n Catalogo de Videojuegos \n";
+    cout << "\n Categoria: Accion \n";
     cout << JUEGO_DOOM_ETERNAL << ". Doom Eternal (PS5) - $" << PRECIO_DOOM_ETERNAL << "\n";
     cout << JUEGO_CYBERPUNK_2077 << ". Cyberpunk 2077 (PC) - $" << PRECIO_CYBERPUNK_2077 << "\n";
     cout << JUEGO_RED_DEAD_REDEMPTION_2 << ". Red Dead Redemption 2 (Xbox) - $" << PRECIO_RED_DEAD_REDEMPTION_2 << "\n";
 
-    cout << "\n--- Categoria: Aventura ---\n";
+    cout << "\n Categoria: Aventura \n";
     cout << JUEGO_GOD_OF_WAR << ". God of War (PC) - $" << PRECIO_GOD_OF_WAR << "\n";
     cout << JUEGO_LAST_OF_US << ". The Last of Us (PS5) - $" << PRECIO_LAST_OF_US << "\n";
     cout << JUEGO_UNICHARTED_4 << ". Uncharted 4 (PS5) - $" << PRECIO_UNICHARTED_4 << "\n";
 
-    cout << "\n--- Categoria: Deportes ---\n";
-    cout << JUEGO_FIFA_24 << ". FIFA 24 (PS5) - $" << PRECIO_FIFA_24 << "\n";
+    cout << "\n Categoria: Deportes \n";
+    cout << JUEGO_NHL_24 << ". FIFA 24 (PS5) - $" << PRECIO_NHL_24 << "\n";
     cout << JUEGO_NBA_2K24 << ". NBA 2K24 (Xbox) - $" << PRECIO_NBA_2K24 << "\n";
     cout << JUEGO_FC_24 << ". FC 24 (PC) - $" << PRECIO_FC_24 << "\n";
 
-    cout << "\n--- Categoria: Estrategia ---\n";
+    cout << "\n Categoria: Estrategia \n";
     cout << JUEGO_CIVILIZATION_VI << ". Civilization VI (PC) - $" << PRECIO_CIVILIZATION_VI << "\n";
     cout << JUEGO_STAR_CRAFT_II << ". StarCraft II (PC) - $" << PRECIO_STAR_CRAFT_II << "\n";
     cout << JUEGO_AGE_OF_EMPIRES_IV << ". Age of Empires IV (PC) - $" << PRECIO_AGE_OF_EMPIRES_IV << "\n";
@@ -32,11 +27,11 @@ void mostrarCatalogoJuegos()
 int leerCodigoJuego()
 {
     int codigo;
-    cout << "Ingrese el codigo del juego (1-12): ";
+    cout << "Ingrese el codigo del juego (101-412): ";
     cin >> codigo;
-    while (codigo < 1 || codigo > 12)
+    while (codigo < 101 || codigo > 412)
     {
-        cout << "Codigo invalido. Intente de nuevo (1-12): ";
+        cout << "Codigo invalido. Intente de nuevo (101-412): ";
         cin.clear();
         cin.ignore(10000, '\n');
         cin >> codigo;
@@ -62,10 +57,9 @@ int leerCantidadJuegos()
 string obtenerNombreJuego(int codigoJuego)
 {
     switch (codigoJuego)
-    {
-        case JUEGO_DOOM_ETERNAL: return "Doom Eternal";
+    {   case JUEGO_DOOM_ETERNAL: return "Doom Eternal";
         case JUEGO_GOD_OF_WAR: return "God of War";
-        case JUEGO_FIFA_24: return "FIFA 24";
+        case JUEGO_NHL_24: return "FIFA 24";
         case JUEGO_CIVILIZATION_VI: return "Civilization VI";
         case JUEGO_CYBERPUNK_2077: return "Cyberpunk 2077";
         case JUEGO_LAST_OF_US: return "The Last of Us";
@@ -75,17 +69,15 @@ string obtenerNombreJuego(int codigoJuego)
         case JUEGO_UNICHARTED_4: return "Uncharted 4";
         case JUEGO_FC_24: return "FC 24";
         case JUEGO_AGE_OF_EMPIRES_IV: return "Age of Empires IV";
-        default: return "Desconocido";
-    }
+        default: return "Desconocido";}
 }
 
 double obtenerPrecioJuego(int codigoJuego)
 {
     switch (codigoJuego)
-    {
-        case JUEGO_DOOM_ETERNAL: return PRECIO_DOOM_ETERNAL;
+    {   case JUEGO_DOOM_ETERNAL: return PRECIO_DOOM_ETERNAL;
         case JUEGO_GOD_OF_WAR: return PRECIO_GOD_OF_WAR;
-        case JUEGO_FIFA_24: return PRECIO_FIFA_24;
+        case JUEGO_NHL_24: return PRECIO_NHL_24;
         case JUEGO_CIVILIZATION_VI: return PRECIO_CIVILIZATION_VI;
         case JUEGO_CYBERPUNK_2077: return PRECIO_CYBERPUNK_2077;
         case JUEGO_LAST_OF_US: return PRECIO_LAST_OF_US;
@@ -95,17 +87,15 @@ double obtenerPrecioJuego(int codigoJuego)
         case JUEGO_UNICHARTED_4: return PRECIO_UNICHARTED_4;
         case JUEGO_FC_24: return PRECIO_FC_24;
         case JUEGO_AGE_OF_EMPIRES_IV: return PRECIO_AGE_OF_EMPIRES_IV;
-        default: return 0.0;
-    }
+        default: return 0.0;}
 }
 
 string obtenerPlataforma(int codigoJuego)
 {
     switch (codigoJuego)
-    {
-        case JUEGO_DOOM_ETERNAL: return "PS5";
+    {   case JUEGO_DOOM_ETERNAL: return "PS5";
         case JUEGO_GOD_OF_WAR: return "PC";
-        case JUEGO_FIFA_24: return "PS5";
+        case JUEGO_NHL_24: return "PS5";
         case JUEGO_CIVILIZATION_VI: return "PC";
         case JUEGO_CYBERPUNK_2077: return "PC";
         case JUEGO_LAST_OF_US: return "PS5";
@@ -115,17 +105,15 @@ string obtenerPlataforma(int codigoJuego)
         case JUEGO_UNICHARTED_4: return "PS5";
         case JUEGO_FC_24: return "PC";
         case JUEGO_AGE_OF_EMPIRES_IV: return "PC";
-        default: return "Desconocida";
-    }
+        default: return "Desconocida";}
 }
 
 string obtenerCategoria(int codigoJuego)
 {
     switch (codigoJuego)
-    {
-        case JUEGO_DOOM_ETERNAL: return "Accion";
+    {   case JUEGO_DOOM_ETERNAL: return "Accion";
         case JUEGO_GOD_OF_WAR: return "Aventura";
-        case JUEGO_FIFA_24: return "Deportes";
+        case JUEGO_NHL_24: return "Deportes";
         case JUEGO_CIVILIZATION_VI: return "Estrategia";
         case JUEGO_CYBERPUNK_2077: return "Accion";
         case JUEGO_LAST_OF_US: return "Aventura";
@@ -135,8 +123,7 @@ string obtenerCategoria(int codigoJuego)
         case JUEGO_UNICHARTED_4: return "Aventura";
         case JUEGO_FC_24: return "Deportes";
         case JUEGO_AGE_OF_EMPIRES_IV: return "Estrategia";
-        default: return "Desconocida";
-    }
+        default: return "Desconocida";}
 }
 
 void agregarJuegoAlCarrito(int codigos[], int cantidades[], int& cantidadJuegosRegistrados)
@@ -249,6 +236,8 @@ void mostrarResumenCompra(const int codigos[], const int cantidades[], int canti
     cout << "Total a pagar: $" << total << "\n\n";
 }
 
+
+//Profe la verdad gran parte del codigo me ayudo la IA, ando perdido
 void cargarCompraDemo(int codigos[], int cantidades[], int& cantidadJuegosRegistrados)
 {
     limpiarCarrito(cantidadJuegosRegistrados);
